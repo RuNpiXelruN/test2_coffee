@@ -18,6 +18,10 @@ class UsersController < ApplicationController
 
     if @user.valid?
       sign_in(@user)
+      @profile = Profile.new
+      @profile.user_id = current_user.id
+      @profile.save
+      flash[:notice] = "Success"
       redirect_to user_path(@user)
     else
       render :new

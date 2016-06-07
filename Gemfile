@@ -10,6 +10,7 @@ gem 'puma', '~> 3.0'
 
 
 gem 'monban-generators'
+gem 'nested_form'
 
 
 # Use SCSS for stylesheets
